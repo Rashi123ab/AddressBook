@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/contact")
-public class ContactController {  //    UC4--using contact service in controller
+public class ContactController {
 
     @Autowired
     private ContactService contactService;
@@ -39,6 +39,6 @@ public class ContactController {  //    UC4--using contact service in controller
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteContact(@PathVariable Long id) {
         contactService.deleteContact(id);
-        return ResponseEntity.ok("Contact deleted successfully");
+        return ResponseEntity.ok("Contact deleted successfully !!");
     }
 }
