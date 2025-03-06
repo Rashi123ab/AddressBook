@@ -1,7 +1,9 @@
 package com.rashi.AddressBook.Address.controller;
 
+import com.rashi.AddressBook.Address.DTO.ContactDTO;
 import com.rashi.AddressBook.Address.model.Contact;
-import com.rashi.AddressBook.Address.repository.ContactRepository;
+import com.rashi.AddressBook.Address.service.ContactService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,45 +13,36 @@ import java.util.List;
 @RequestMapping("/contact")
 public class ContactController {
 
-    private final ContactRepository repository;
+    @Autowired
+    private ContactService contactService;
 
-    public ContactController(ContactRepository repository) {
-        this.repository = repository;
+    @GetMapping
+    public ResponseEntity<List<ContactDTO>> getAllContacts() {
+        return ResponseEntity.ok(contactService.getAllContacts());
     }
 
-    @PostMapping  //to save contact details
-    public ResponseEntity<Contact> addContact(@RequestBody Contact contact) {
-        return ResponseEntity.ok(repository.save(contact));
-    }
-
-    @GetMapping    //to get all saved contacts
-    public ResponseEntity<List<Contact>> getAllContacts() {
-        return ResponseEntity.ok(repository.findAll());
-    }
-
-    @GetMapping("/{id}")  //to get contact stored at particular id
+    // Get contact by ID
+    @GetMapping("/{id}")
     public ResponseEntity<Contact> getContactById(@PathVariable Long id) {
-        return repository.findById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+        return ResponseEntity.ok(contactService.getContactById(id));
     }
 
-    @PutMapping("/{id}")   //to update contact stored at particular id
-    public ResponseEntity<Contact> updateContact(@PathVariable Long id, @RequestBody Contact newContact) {
-        return repository.findById(id).map(contact -> {
-            contact.setName(newContact.getName());
-            contact.setEmail(newContact.getEmail());
-            contact.setPhone(newContact.getPhone());
-            return ResponseEntity.ok(repository.save(contact));
-        }).orElse(ResponseEntity.notFound().build());
+    // Create a new contact
+    @PostMapping
+    public ResponseEntity<Contact> addContact(@RequestBody Contact contact) {
+        return ResponseEntity.ok(contactService.addContact(contact));
     }
 
-    @DeleteMapping("/{id}")  //to delete contact stored at particular id
-    public ResponseEntity<Void> deleteContact(@PathVariable Long id) {
-        if (repository.existsById(id)) {
-            repository.deleteById(id);
-            return ResponseEntity.noContent().build();
-        }
-        return ResponseEntity.notFound().build();
+    // Update contact by ID
+    @PutMapping("/{id}")
+    public ResponseEntity<Contact> updateContact(@PathVariable Long id, @RequestBody Contact contact) {
+        return ResponseEntity.ok(contactService.updateContact(id, contact));
+    }
+
+    // Delete contact by ID
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteContact(@PathVariable Long id) {
+        contactService.deleteContact(id);
+        return ResponseEntity.ok("Contact deleted successfully");
     }
 }
