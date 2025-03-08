@@ -15,40 +15,35 @@ import java.util.List;
 @RequestMapping("/contacts")
 public class ContactController {
 
+    @Autowired
     ContactService contactService;
 
-    public ContactController(ContactService contactService) {
-        this.contactService = contactService;
+    @PostMapping("/create")
+    public ResponseEntity<Contact> createEntry(@RequestBody ContactDTO dto) {
+        Contact addressBook = contactService.createAddressBookEntry(dto);
+        return ResponseEntity.ok(addressBook);
     }
 
-    @GetMapping
-    public ResponseEntity<List<Contact>> getAllContacts() {
-        log.info("Received request to fetch all contacts");
-        return ResponseEntity.ok(contactService.getAllContacts());
+    @GetMapping("/all")
+    public ResponseEntity<List<Contact>> getAllEntries() {
+        return ResponseEntity.ok(contactService.getAllEntries());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Contact> getContactById(@PathVariable Long id) {
-        log.info("Received request to fetch contact with ID: {}", id);
-        return ResponseEntity.ok(contactService.getContactById(id));
-    }
-
-    @PostMapping
-    public ResponseEntity<Contact> addContact(@RequestBody Contact contact) {
-        log.info("Received request to add a new contact");
-        return ResponseEntity.ok(contactService.addContact(contact));
+    public ResponseEntity<Contact> getEntryById(@PathVariable Long id) {
+        Contact addressBook = contactService.getEntryById(id);
+        return (addressBook != null) ? ResponseEntity.ok(addressBook) : ResponseEntity.notFound().build();
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Contact> updateContact(@PathVariable Long id, @RequestBody Contact contact) {
-        log.info("Received request to update contact with ID: {}", id);
-        return ResponseEntity.ok(contactService.updateContact(id, contact));
+    public ResponseEntity<Contact> updateEntry(@PathVariable Long id, @RequestBody ContactDTO dto) {
+        Contact updatedEntry = contactService.updateEntry(id, dto);
+        return (updatedEntry != null) ? ResponseEntity.ok(updatedEntry) : ResponseEntity.notFound().build();
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteContact(@PathVariable Long id) {
-        log.info("Received request to delete contact with ID: {}", id);
-        contactService.deleteContact(id);
+    public ResponseEntity<Void> deleteEntry(@PathVariable Long id) {
+        contactService.deleteEntry(id);
         return ResponseEntity.noContent().build();
     }
 }

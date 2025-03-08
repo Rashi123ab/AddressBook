@@ -1,65 +1,53 @@
 package com.rashi.AddressBook.Address.service;
 
+import com.rashi.AddressBook.Address.Interfaces.IAddressBookService;
 import com.rashi.AddressBook.Address.DTO.ContactDTO;
 import com.rashi.AddressBook.Address.model.Contact;
-import lombok.extern.slf4j.Slf4j;
+import com.rashi.AddressBook.Address.repository.ContactRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.concurrent.atomic.AtomicLong;
 
-@Slf4j
 @Service
-public class ContactService {
+public class ContactService implements IAddressBookService {
 
-    List<Contact> contacts = new ArrayList<>();
-    private long idCounter = 1; //auto-increment ID
+    @Autowired
+    ContactRepository contactRepository;
 
-    public List<Contact> getAllContacts() {
-        log.info("Fetching all contacts");
-        return contacts;
+    @Override
+    public Contact createAddressBookEntry(ContactDTO dto) {
+        Contact addressBook = new Contact(null,dto.getName(), dto.getEmail(), dto.getPhone());
+        return contactRepository.save(addressBook);
     }
 
-    public Contact getContactById(Long id) {
-        log.info("Fetching contact with ID: {}", id);
-        return contacts.stream()
-                .filter(contact -> contact.getId().equals(id))
-                .findFirst()
-                .orElseThrow(() -> {
-                    log.error("Contact with ID {} not found", id);
-                    return new RuntimeException("Contact not found");
-                });
+    @Override
+    public List<Contact> getAllEntries() {
+        return contactRepository.findAll();
     }
 
-    public Contact addContact(Contact contact) {
-        contact.setId(idCounter++);
-        contacts.add(contact);
-        log.info("Added new contact: {}", contact);
-        return contact;
+    @Override
+    public Contact getEntryById(Long id) {
+        return contactRepository.findById(id).orElse(null);
     }
 
-    public Contact updateContact(Long id, Contact newContact) {
-        Optional<Contact> optionalContact = contacts.stream()
-                .filter(contact -> contact.getId().equals(id))
-                .findFirst();
+    @Override
+    public Contact updateEntry(Long id, ContactDTO dto) {
+        Optional<Contact> existingEntry = contactRepository.findById(id);
 
-        if (optionalContact.isPresent()) {
-            Contact existingContact = optionalContact.get();
-            existingContact.setName(newContact.getName());
-            existingContact.setEmail(newContact.getEmail());
-            existingContact.setPhone(newContact.getPhone());
-            log.info("Updated contact with ID {}: {}", id, existingContact);
-            return existingContact;
-        } else {
-            log.error("Contact with ID {} not found for update", id);
-            throw new RuntimeException("Contact not found");
+        if (existingEntry.isPresent()) {
+            Contact updatedEntry = existingEntry.get();
+            updatedEntry.setName(dto.getName());
+            updatedEntry.setEmail(dto.getEmail());
+            updatedEntry.setPhone(dto.getPhone());
+            return contactRepository.save(updatedEntry);
         }
+        return null;
     }
 
-    public void deleteContact(Long id) {
-        contacts.removeIf(contact -> contact.getId().equals(id));
-        log.warn("Deleted contact with ID: {}", id);
+    @Override
+    public void deleteEntry(Long id) {
+        contactRepository.deleteById(id);
     }
 }

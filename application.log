@@ -14,3 +14,17 @@
 2025-03-08T11:06:04.614+05:30  INFO 11712 --- [Address] [http-nio-8080-exec-3] c.r.A.Address.service.ContactService     : Added new contact: Contact(id=2, name=Rashi, email=john@example.com, phone=1234567890)
 2025-03-08T11:06:09.987+05:30  INFO 11712 --- [Address] [http-nio-8080-exec-4] c.r.A.A.controller.ContactController     : Received request to fetch all contacts
 2025-03-08T11:06:09.987+05:30  INFO 11712 --- [Address] [http-nio-8080-exec-4] c.r.A.Address.service.ContactService     : Fetching all contacts
+2025-03-08T11:50:21.816+05:30  INFO 21432 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 21432 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-08T11:50:21.820+05:30 DEBUG 21432 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-08T11:50:21.820+05:30  INFO 21432 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-08T11:50:26.033+05:30  WARN 21432 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-08T11:50:26.550+05:30  INFO 21432 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 5.321 seconds (process running for 5.92)
+2025-03-08T11:50:26.554+05:30  INFO 21432 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-08T11:54:21.698+05:30  WARN 21432 --- [Address] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2025-03-08T11:54:34.758+05:30  WARN 21432 --- [Address] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2025-03-08T11:56:18.615+05:30  INFO 22928 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 22928 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-08T11:56:18.618+05:30 DEBUG 22928 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-08T11:56:18.619+05:30  INFO 22928 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-08T11:56:22.376+05:30  WARN 22928 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-08T11:56:22.866+05:30  INFO 22928 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 4.784 seconds (process running for 5.297)
+2025-03-08T11:56:22.872+05:30  INFO 22928 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
