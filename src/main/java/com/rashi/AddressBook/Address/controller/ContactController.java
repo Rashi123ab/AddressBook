@@ -6,6 +6,7 @@ import com.rashi.AddressBook.Address.service.ContactService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,10 +17,10 @@ import java.util.List;
 public class ContactController {
 
     @Autowired
-    ContactService contactService;
+    private ContactService contactService;
 
     @PostMapping("/create")
-    public ResponseEntity<Contact> createEntry(@RequestBody ContactDTO dto) {
+    public ResponseEntity<Contact> createEntry(@Valid @RequestBody ContactDTO dto) {
         Contact addressBook = contactService.createAddressBookEntry(dto);
         return ResponseEntity.ok(addressBook);
     }
@@ -36,7 +37,7 @@ public class ContactController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Contact> updateEntry(@PathVariable Long id, @RequestBody ContactDTO dto) {
+    public ResponseEntity<Contact> updateEntry(@PathVariable Long id, @Valid @RequestBody ContactDTO dto) {
         Contact updatedEntry = contactService.updateEntry(id, dto);
         return (updatedEntry != null) ? ResponseEntity.ok(updatedEntry) : ResponseEntity.notFound().build();
     }

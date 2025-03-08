@@ -1,5 +1,6 @@
 package com.rashi.AddressBook.Address.service;
 
+import com.rashi.AddressBook.Address.Exception.ContactException;
 import com.rashi.AddressBook.Address.Interfaces.IAddressBookService;
 import com.rashi.AddressBook.Address.DTO.ContactDTO;
 import com.rashi.AddressBook.Address.model.Contact;
@@ -12,13 +13,12 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @Service
 public class ContactService implements IAddressBookService {
-
     @Autowired
     ContactRepository contactRepository;
 
     @Override
     public Contact createAddressBookEntry(ContactDTO dto) {
-        Contact addressBook = new Contact(null,dto.getName(), dto.getEmail(), dto.getPhone());
+        Contact addressBook = new Contact(null, dto.getName(), dto.getEmail(), dto.getPhone());
         return contactRepository.save(addressBook);
     }
 
@@ -29,25 +29,26 @@ public class ContactService implements IAddressBookService {
 
     @Override
     public Contact getEntryById(Long id) {
-        return contactRepository.findById(id).orElse(null);
+        return contactRepository.findById(id)
+                .orElseThrow(() -> new ContactException("Employee with ID " + id + " not found"));
     }
 
     @Override
     public Contact updateEntry(Long id, ContactDTO dto) {
-        Optional<Contact> existingEntry = contactRepository.findById(id);
+        Contact addressBook = contactRepository.findById(id)
+                .orElseThrow(() -> new ContactException("Address Book entry with ID " + id + " not found"));
+        addressBook.setName(dto.getName());
+        addressBook.setEmail(dto.getEmail());
+        addressBook.setPhone(dto.getPhone());
 
-        if (existingEntry.isPresent()) {
-            Contact updatedEntry = existingEntry.get();
-            updatedEntry.setName(dto.getName());
-            updatedEntry.setEmail(dto.getEmail());
-            updatedEntry.setPhone(dto.getPhone());
-            return contactRepository.save(updatedEntry);
-        }
-        return null;
+        return contactRepository.save(addressBook);
     }
 
     @Override
     public void deleteEntry(Long id) {
+        if (!contactRepository.existsById(id)) {
+            throw new ContactException("Entry with ID " + id + " not found");
+        }
         contactRepository.deleteById(id);
     }
 }
