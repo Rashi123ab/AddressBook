@@ -14,7 +14,7 @@ import java.util.List;
 public class ContactController {
 
     @Autowired
-    private ContactService contactService;
+    ContactService contactService;
 
     @GetMapping
     public ResponseEntity<List<ContactDTO>> getAllContacts() {

@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Service
 public class ContactService {
 
-    private final List<Contact> contacts = new ArrayList<>();
+    List<Contact> contacts = new ArrayList<>();
     private long idCounter = 1; //auto-increment ID
 
     public List<ContactDTO> getAllContacts() {
