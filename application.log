@@ -3,3 +3,14 @@
 2025-03-08T11:04:48.847+05:30  INFO 8672 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
 2025-03-08T11:04:52.841+05:30  WARN 8672 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2025-03-08T11:04:53.669+05:30  INFO 8672 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 5.413 seconds (process running for 6.153)
+2025-03-08T11:05:44.783+05:30  INFO 11712 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 11712 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-08T11:05:44.785+05:30 DEBUG 11712 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-08T11:05:44.786+05:30  INFO 11712 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-08T11:05:47.950+05:30  WARN 11712 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-08T11:05:48.617+05:30  INFO 11712 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 4.368 seconds (process running for 4.937)
+2025-03-08T11:06:02.871+05:30  INFO 11712 --- [Address] [http-nio-8080-exec-2] c.r.A.A.controller.ContactController     : Received request to add a new contact
+2025-03-08T11:06:02.872+05:30  INFO 11712 --- [Address] [http-nio-8080-exec-2] c.r.A.Address.service.ContactService     : Added new contact: Contact(id=1, name=Rashi, email=john@example.com, phone=1234567890)
+2025-03-08T11:06:04.613+05:30  INFO 11712 --- [Address] [http-nio-8080-exec-3] c.r.A.A.controller.ContactController     : Received request to add a new contact
+2025-03-08T11:06:04.614+05:30  INFO 11712 --- [Address] [http-nio-8080-exec-3] c.r.A.Address.service.ContactService     : Added new contact: Contact(id=2, name=Rashi, email=john@example.com, phone=1234567890)
+2025-03-08T11:06:09.987+05:30  INFO 11712 --- [Address] [http-nio-8080-exec-4] c.r.A.A.controller.ContactController     : Received request to fetch all contacts
+2025-03-08T11:06:09.987+05:30  INFO 11712 --- [Address] [http-nio-8080-exec-4] c.r.A.Address.service.ContactService     : Fetching all contacts
