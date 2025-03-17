@@ -4,3 +4,118 @@
 2025-03-10T10:38:07.539+05:30  WARN 10880 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2025-03-10T10:38:08.151+05:30  INFO 10880 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 6.016 seconds (process running for 6.744)
 2025-03-10T10:38:08.157+05:30  INFO 10880 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-17T14:56:20.750+05:30  INFO 7028 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 7028 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-17T14:56:20.752+05:30 DEBUG 7028 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17T14:56:20.753+05:30  INFO 7028 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-17T14:56:25.135+05:30  WARN 7028 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-17T14:56:25.715+05:30  WARN 7028 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a435ae57-d739-485d-bef1-6632889e6858
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-17T14:56:26.008+05:30  INFO 7028 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 5.873 seconds (process running for 6.525)
+2025-03-17T14:56:26.013+05:30  INFO 7028 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-17T15:01:24.703+05:30  INFO 12920 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 12920 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-17T15:01:24.705+05:30 DEBUG 12920 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17T15:01:24.707+05:30  INFO 12920 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-17T15:01:28.800+05:30  WARN 12920 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-17T15:01:28.836+05:30  WARN 12920 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ee542fc0-8120-41e4-aeb0-88d977525453
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-17T15:01:29.637+05:30  INFO 12920 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 5.448 seconds (process running for 5.967)
+2025-03-17T15:01:29.643+05:30  INFO 12920 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-17T15:03:14.506+05:30  WARN 12920 --- [Address] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.security.WeakKeyException: The signing key's size is 32 bits which is not secure enough for the HS256 algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HS256 MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys class's 'secretKeyFor(SignatureAlgorithm.HS256)' method to create a key guaranteed to be secure enough for HS256.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.]
+2025-03-17T15:03:29.539+05:30  WARN 12920 --- [Address] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: User not found]
+2025-03-17T15:09:32.925+05:30  INFO 14680 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 14680 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-17T15:09:32.929+05:30 DEBUG 14680 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17T15:09:32.931+05:30  INFO 14680 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-17T15:09:37.024+05:30  WARN 14680 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-17T15:09:37.063+05:30  WARN 14680 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0059125b-9b3d-4776-883d-b73b84c42f73
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-17T15:09:37.877+05:30  INFO 14680 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 5.481 seconds (process running for 6.017)
+2025-03-17T15:09:37.882+05:30  INFO 14680 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-17T15:10:05.875+05:30  WARN 14680 --- [Address] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.security.WeakKeyException: The signing key's size is 32 bits which is not secure enough for the HS256 algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HS256 MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys class's 'secretKeyFor(SignatureAlgorithm.HS256)' method to create a key guaranteed to be secure enough for HS256.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.]
+2025-03-17T15:11:26.469+05:30  WARN 14680 --- [Address] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.security.WeakKeyException: The signing key's size is 32 bits which is not secure enough for the HS256 algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HS256 MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys class's 'secretKeyFor(SignatureAlgorithm.HS256)' method to create a key guaranteed to be secure enough for HS256.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.]
+2025-03-17T15:12:51.295+05:30  INFO 15648 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 15648 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-17T15:12:51.297+05:30 DEBUG 15648 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17T15:12:51.298+05:30  INFO 15648 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-17T15:12:55.404+05:30  WARN 15648 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-17T15:12:55.443+05:30  WARN 15648 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 48b78838-a5a7-44e4-9281-7de0da816ff2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-17T15:12:56.262+05:30  INFO 15648 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 5.48 seconds (process running for 6.04)
+2025-03-17T15:12:56.267+05:30  INFO 15648 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-17T15:13:35.751+05:30  WARN 15648 --- [Address] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [io.jsonwebtoken.security.WeakKeyException: The signing key's size is 32 bits which is not secure enough for the HS256 algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HS256 MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys class's 'secretKeyFor(SignatureAlgorithm.HS256)' method to create a key guaranteed to be secure enough for HS256.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.]
+2025-03-17T15:15:11.143+05:30  INFO 17496 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 17496 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-17T15:15:11.146+05:30 DEBUG 17496 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17T15:15:11.147+05:30  INFO 17496 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-17T15:15:15.057+05:30  WARN 17496 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-17T15:15:15.093+05:30  WARN 17496 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e3f027d3-416b-4728-a14f-e4102d3446a7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-17T15:15:15.842+05:30  INFO 17496 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 5.179 seconds (process running for 5.674)
+2025-03-17T15:15:15.853+05:30  INFO 17496 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-17T15:15:48.739+05:30  WARN 17496 --- [Address] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.IncorrectResultSizeDataAccessException: Query did not return a unique result: 2 results were returned]
+2025-03-17T15:16:09.150+05:30  INFO 15936 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 15936 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-17T15:16:09.153+05:30 DEBUG 15936 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17T15:16:09.154+05:30  INFO 15936 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-17T15:16:13.073+05:30  WARN 15936 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-17T15:16:13.109+05:30  WARN 15936 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 65f3acc1-37ed-4cc1-8db7-edb951040072
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-17T15:16:13.894+05:30  INFO 15936 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 5.265 seconds (process running for 5.79)
+2025-03-17T15:16:13.899+05:30  INFO 15936 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-17T15:16:58.207+05:30  INFO 16988 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 16988 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-17T15:16:58.209+05:30 DEBUG 16988 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17T15:16:58.210+05:30  INFO 16988 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-17T15:17:02.019+05:30  WARN 16988 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-17T15:17:02.062+05:30  WARN 16988 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3820ea80-7a16-40b1-8075-49c669159eb1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-17T15:17:02.877+05:30  INFO 16988 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 5.182 seconds (process running for 5.674)
+2025-03-17T15:17:02.880+05:30  INFO 16988 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-17T15:17:31.308+05:30  WARN 16988 --- [Address] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.IncorrectResultSizeDataAccessException: Query did not return a unique result: 3 results were returned]
+2025-03-17T15:30:38.648+05:30  INFO 14400 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 14400 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-17T15:30:38.652+05:30 DEBUG 14400 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17T15:30:38.654+05:30  INFO 14400 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-17T15:30:43.022+05:30  WARN 14400 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-17T15:30:43.063+05:30  WARN 14400 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ac2ca3fb-ff8a-4152-b267-19cd17489faf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-17T15:30:43.842+05:30  INFO 14400 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 5.703 seconds (process running for 6.194)
+2025-03-17T15:30:43.848+05:30  INFO 14400 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-17T15:40:51.149+05:30  INFO 4124 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 4124 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-17T15:40:51.152+05:30 DEBUG 4124 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17T15:40:51.153+05:30  INFO 4124 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-17T15:40:55.341+05:30  WARN 4124 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-17T15:40:55.382+05:30  WARN 4124 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c5b09f76-cd38-465c-bba1-283c0745b990
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-17T15:40:56.336+05:30  INFO 4124 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 5.71 seconds (process running for 6.287)
+2025-03-17T15:40:56.341+05:30  INFO 4124 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
