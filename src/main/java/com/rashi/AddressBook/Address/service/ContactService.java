@@ -5,6 +5,9 @@ import com.rashi.AddressBook.Address.DTO.ContactDTO;
 import com.rashi.AddressBook.Address.model.Contact;
 import com.rashi.AddressBook.Address.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,9 +16,10 @@ import java.util.Optional;
 @Service
 public class ContactService implements IAddressBookService {
     @Autowired
-    ContactRepository contactRepository;
+    private ContactRepository contactRepository;
 
     @Override
+    @CachePut(value = "contacts", key = "#result.id")
     public Contact createAddressBookEntry(ContactDTO dto) {
         try {
             Contact addressBook = new Contact(null, dto.getName(), dto.getEmail(), dto.getPhone());
@@ -27,6 +31,7 @@ public class ContactService implements IAddressBookService {
     }
 
     @Override
+    @Cacheable(value = "contacts")
     public List<Contact> getAllEntries() {
         try {
             return contactRepository.findAll();
@@ -37,6 +42,7 @@ public class ContactService implements IAddressBookService {
     }
 
     @Override
+    @Cacheable(value = "contacts", key = "#id")
     public Contact getEntryById(Long id) {
         try {
             Optional<Contact> contact = contactRepository.findById(id);
@@ -48,6 +54,7 @@ public class ContactService implements IAddressBookService {
     }
 
     @Override
+    @CachePut(value = "contacts", key = "#id")
     public Contact updateEntry(Long id, ContactDTO dto) {
         try {
             Optional<Contact> optionalContact = contactRepository.findById(id);
@@ -68,6 +75,7 @@ public class ContactService implements IAddressBookService {
     }
 
     @Override
+    @CacheEvict(value = "contacts", key = "#id")
     public void deleteEntry(Long id) {
         try {
             if (contactRepository.existsById(id)) {

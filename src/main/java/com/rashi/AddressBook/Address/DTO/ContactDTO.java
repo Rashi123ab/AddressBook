@@ -11,7 +11,6 @@ import lombok.Setter;
 @Setter
 public class ContactDTO {
 
-
     @NotBlank(message = "Name cannot be blank")
     private String name;
 
