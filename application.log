@@ -70,3 +70,432 @@ This generated password is for development use only. Your security configuration
 
 2025-03-18T00:51:50.248+05:30  INFO 11924 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 6.038 seconds (process running for 6.553)
 2025-03-18T00:51:50.252+05:30  INFO 11924 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-18T10:08:27.588+05:30  INFO 17168 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 17168 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-18T10:08:27.591+05:30 DEBUG 17168 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18T10:08:27.591+05:30  INFO 17168 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-18T10:08:33.660+05:30  WARN 17168 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-18T10:08:33.697+05:30  WARN 17168 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: dd62bba5-2051-4524-86e3-43188d1fb14d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-18T10:08:34.701+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:632) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:726) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:257) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2262) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2235) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2215) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:467) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:451) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1972) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1936) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1483) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1324) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:760) ~[na:na]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1249) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198) ~[amqp-client-5.22.0.jar:5.22.0]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:678) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:647) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:593) ~[spring-rabbit-3.2.3.jar:3.2.3]
+	... 12 common frames omitted
+
+2025-03-18T10:08:34.742+05:30  INFO 17168 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 7.794 seconds (process running for 8.594)
+2025-03-18T10:08:34.751+05:30  INFO 17168 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-18T10:08:39.740+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:08:39.748+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:08:44.771+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:08:44.776+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-3] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:08:49.818+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-3] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:08:49.818+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-4] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:08:54.849+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-4] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:08:54.854+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-5] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:08:59.883+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-5] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:08:59.901+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-6] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:09:05.114+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-6] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:09:05.130+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-7] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:09:10.302+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-7] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:09:10.323+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-8] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:09:15.528+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-8] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:09:15.570+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-9] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:09:20.772+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-9] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:09:20.813+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-10] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:09:26.024+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-10] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:09:26.027+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-11] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:09:31.222+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-11] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:09:31.238+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-12] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:09:36.377+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-12] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:09:36.400+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-13] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:09:41.410+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-13] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:09:41.441+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-14] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:09:46.554+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-14] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:09:46.557+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-15] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:09:51.734+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-15] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:09:51.742+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-16] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:09:56.905+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-16] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:09:56.910+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-17] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:10:02.072+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-17] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:10:02.096+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-18] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:10:07.286+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-18] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:10:07.298+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-19] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:10:12.510+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-19] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:10:12.526+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-20] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:10:17.700+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-20] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:10:17.717+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-21] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:10:22.919+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-21] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:10:22.922+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-22] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:10:28.084+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-22] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:10:28.085+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-23] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:10:33.263+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-23] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:10:33.264+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-24] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:10:38.433+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-24] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:10:38.436+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-25] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:10:43.601+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-25] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:10:43.625+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-26] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:10:48.782+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-26] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:10:48.783+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-27] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:10:53.957+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-27] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:10:53.960+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-28] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:10:59.112+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-28] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:10:59.129+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-29] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:11:04.268+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-29] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:11:04.272+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-30] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:11:09.405+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-30] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:11:09.438+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-31] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:11:14.615+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-31] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:11:14.643+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-32] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:11:19.803+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-32] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:11:19.807+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-33] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:11:24.965+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-33] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:11:24.972+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-34] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:11:30.105+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-34] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:11:30.128+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-35] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:11:35.288+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-35] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:11:35.294+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-36] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:11:40.443+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-36] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:11:40.476+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-37] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:11:45.671+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-37] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:11:45.676+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-38] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:11:50.850+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-38] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:11:50.851+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-39] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:11:56.045+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-39] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:11:56.083+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-40] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:12:01.241+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-40] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:12:01.283+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-41] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:12:06.467+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-41] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:12:06.485+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-42] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:12:11.633+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-42] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:12:11.638+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-43] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:12:16.771+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-43] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:12:16.799+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-44] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:12:22.025+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-44] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:12:22.028+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-45] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:12:27.199+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-45] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:12:27.203+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-46] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:12:32.383+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-46] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:12:32.402+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-47] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:12:37.436+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-47] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:12:37.460+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-48] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:12:42.667+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-48] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:12:42.685+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-49] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:12:47.915+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-49] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:12:47.954+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-50] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:12:53.149+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-50] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:12:53.150+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-51] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:12:58.321+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-51] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:12:58.325+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-52] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:13:03.499+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-52] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:13:03.516+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-53] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:13:08.680+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-53] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:13:08.714+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-54] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:13:13.863+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-54] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:13:13.866+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-55] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:13:19.023+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-55] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:13:19.028+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-56] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:13:24.238+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-56] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:13:24.253+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-57] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:13:29.318+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-57] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:13:29.322+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-58] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:13:34.517+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-58] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:13:34.522+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-59] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:13:39.700+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-59] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:13:39.703+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-60] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:13:44.867+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-60] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:13:44.898+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-61] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:13:50.106+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-61] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:13:50.113+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-62] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:13:55.307+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-62] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:13:55.310+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-63] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:14:00.343+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-63] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:14:00.359+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-64] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:14:05.537+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-64] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:14:05.553+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-65] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:14:10.723+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-65] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:14:10.730+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-66] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:14:15.931+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-66] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:14:15.949+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-67] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:14:20.955+05:30  WARN 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-67] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-03-18T10:14:21.046+05:30 ERROR 17168 --- [Address] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-68] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+2025-03-18T10:15:18.576+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 18776 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-18T10:15:18.590+05:30 DEBUG 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18T10:15:18.594+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-18T10:15:26.484+05:30  WARN 18776 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-18T10:15:26.522+05:30  WARN 18776 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9a5279c9-5416-4a68-bac6-59aa72013cf4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-18T10:15:27.467+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 9.8 seconds (process running for 10.865)
+2025-03-18T10:15:27.467+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-18T10:15:58.906+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 18776 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-18T10:15:58.906+05:30 DEBUG 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18T10:15:58.906+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-18T10:15:59.612+05:30  WARN 18776 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-18T10:15:59.934+05:30  WARN 18776 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 75987d0d-444d-49df-9de7-bf40d816684f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-18T10:16:00.023+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 1.146 seconds (process running for 43.432)
+2025-03-18T10:16:00.041+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-18T10:16:01.514+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 18776 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-18T10:16:01.514+05:30 DEBUG 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18T10:16:01.514+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-18T10:16:02.190+05:30  WARN 18776 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-18T10:16:02.206+05:30  WARN 18776 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b411c542-1daa-433e-8f97-c79aea78642f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-18T10:16:02.569+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 1.078 seconds (process running for 45.964)
+2025-03-18T10:16:02.571+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-18T10:18:13.801+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 18776 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-18T10:18:13.801+05:30 DEBUG 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18T10:18:13.801+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-18T10:18:14.660+05:30  WARN 18776 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-18T10:18:14.669+05:30  WARN 18776 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 579727d5-c67f-41c4-95d1-cc22295328ed
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-18T10:18:14.901+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 1.131 seconds (process running for 178.296)
+2025-03-18T10:18:14.904+05:30  INFO 18776 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-18T10:40:18.508+05:30  INFO 18672 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 18672 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-18T10:40:18.508+05:30 DEBUG 18672 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18T10:40:18.508+05:30  INFO 18672 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-18T10:40:24.507+05:30  WARN 18672 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-18T10:40:24.547+05:30  WARN 18672 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 87211674-26b8-4e55-9557-865da5141af6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-18T10:40:25.672+05:30  INFO 18672 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 7.831 seconds (process running for 8.592)
+2025-03-18T10:40:25.679+05:30  INFO 18672 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-18T10:41:39.208+05:30  INFO 16788 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 16788 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-18T10:41:39.208+05:30 DEBUG 16788 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18T10:41:39.208+05:30  INFO 16788 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-18T10:41:44.684+05:30  WARN 16788 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-18T10:41:44.731+05:30  WARN 16788 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2f680071-2fe7-453f-808b-9ddaade671e1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-18T10:41:45.888+05:30  INFO 16788 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 7.283 seconds (process running for 8.073)
+2025-03-18T10:41:45.892+05:30  INFO 16788 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-18T10:43:26.045+05:30 ERROR 16788 --- [Address] [http-nio-8080-exec-3] c.r.A.A.controller.ContactController     : Error creating contact: Unable to connect to Redis
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1858) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1789) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1586) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.lambda$getConnection$0(LettuceConnectionFactory.java:1566) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.doInLock(LettuceConnectionFactory.java:1527) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1563) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1249) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:1055) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.execute(DefaultRedisCacheWriter.java:401) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	at org.springframework.data.redis.cache.DefaultRedisCacheWriter.put(DefaultRedisCacheWriter.java:237) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:208) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doPut(AbstractCacheInvoker.java:164) ~[spring-context-6.2.3.jar:6.2.3]
+	at org.springframework.cache.interceptor.CacheAspectSupport$CachePutRequest.performCachePut(CacheAspectSupport.java:1051) ~[spring-context-6.2.3.jar:6.2.3]
+	at org.springframework.cache.interceptor.CacheAspectSupport$CachePutRequest.apply(CacheAspectSupport.java:1036) ~[spring-context-6.2.3.jar:6.2.3]
+	at org.springframework.cache.interceptor.CacheAspectSupport.evaluate(CacheAspectSupport.java:580) ~[spring-context-6.2.3.jar:6.2.3]
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:447) ~[spring-context-6.2.3.jar:6.2.3]
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:409) ~[spring-context-6.2.3.jar:6.2.3]
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:65) ~[spring-context-6.2.3.jar:6.2.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.3.jar:6.2.3]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.3.jar:6.2.3]
+	at com.rashi.AddressBook.Address.service.ContactService$$SpringCGLIB$$0.createAddressBookEntry(<generated>) ~[classes/:na]
+	at com.rashi.AddressBook.Address.controller.ContactController.createEntry(ContactController.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.36.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.36.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.3.jar:6.4.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:63) ~[lettuce-core-6.4.2.RELEASE.jar:6.4.2.RELEASE/f4dfb40]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:41) ~[lettuce-core-6.4.2.RELEASE.jar:6.4.2.RELEASE/f4dfb40]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:354) ~[lettuce-core-6.4.2.RELEASE.jar:6.4.2.RELEASE/f4dfb40]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:219) ~[lettuce-core-6.4.2.RELEASE.jar:6.4.2.RELEASE/f4dfb40]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:112) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:112) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1787) ~[spring-data-redis-3.4.3.jar:3.4.3]
+	... 112 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: getsockopt: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:1062) ~[na:na]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:336) ~[netty-transport-4.1.118.Final.jar:4.1.118.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:339) ~[netty-transport-4.1.118.Final.jar:4.1.118.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:784) ~[netty-transport-4.1.118.Final.jar:4.1.118.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732) ~[netty-transport-4.1.118.Final.jar:4.1.118.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658) ~[netty-transport-4.1.118.Final.jar:4.1.118.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.118.Final.jar:4.1.118.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) ~[netty-common-4.1.118.Final.jar:4.1.118.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.118.Final.jar:4.1.118.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.118.Final.jar:4.1.118.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-03-18T10:46:34.636+05:30  INFO 12168 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 12168 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-18T10:46:34.643+05:30 DEBUG 12168 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18T10:46:34.644+05:30  INFO 12168 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-18T10:46:40.841+05:30  WARN 12168 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-18T10:46:40.908+05:30  WARN 12168 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 255dda07-20db-4d3c-a76b-7f43e9d58ae4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-18T10:46:41.978+05:30  INFO 12168 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 8.092 seconds (process running for 8.813)
+2025-03-18T10:46:41.989+05:30  INFO 12168 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-18T11:01:14.297+05:30  INFO 16992 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 16992 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-18T11:01:14.297+05:30 DEBUG 16992 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18T11:01:14.297+05:30  INFO 16992 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-18T11:01:21.903+05:30  WARN 16992 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-18T11:01:21.950+05:30  WARN 16992 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3c83a6b6-f975-4b28-b533-7f6a29cd15cd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-18T11:01:23.418+05:30  INFO 16992 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 9.901 seconds (process running for 10.652)
+2025-03-18T11:01:23.425+05:30  INFO 16992 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
+2025-03-18T11:05:41.459+05:30  INFO 5760 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Starting AddressApplication using Java 23.0.1 with PID 5760 (E:\SpringBoot\Address\target\classes started by rashi in E:\SpringBoot\Address)
+2025-03-18T11:05:41.464+05:30 DEBUG 5760 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18T11:05:41.464+05:30  INFO 5760 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : The following 1 profile is active: "dev"
+2025-03-18T11:05:47.946+05:30  WARN 5760 --- [Address] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-18T11:05:47.987+05:30  WARN 5760 --- [Address] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0615d947-7f5b-43da-9218-9156100454c5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-18T11:05:49.282+05:30  INFO 5760 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Started AddressApplication in 8.504 seconds (process running for 9.299)
+2025-03-18T11:05:49.282+05:30  INFO 5760 --- [Address] [restartedMain] c.r.A.Address.AddressApplication         : Address Book App Started in dev environment
